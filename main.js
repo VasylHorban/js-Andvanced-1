@@ -38,10 +38,12 @@ const People = (function(){
         
     }
     function delPersonName(event) {
-        let target = [event.target.innerHTML]
+        let target = event.target
         let lis = ul.children;
-        for(let i = lis.length -1;i>=0; i--){
-            if(lis[i].innerHTML == target){
+        console.log(lis)
+        console.log(target)
+        for(let i = lis.length -1; i>=0; i--){
+            if(lis[i] == target){
                 peopleDB.splice(i,1)
             }
         }
